@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameControl: MonoBehaviour {
     public enum GroundStatus {
-        GameBegin,AMoveSelect,ABuildSelect,BMoveSelect,BBuildSelect
+        GameBegin,AMoveSelect,ABuildSelect,BMoveSelect,BBuildSelect, EndPhrase
     }
     public GroundStatus groundStatus;
     // 1 = GameBegin

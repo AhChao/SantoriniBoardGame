@@ -50,13 +50,18 @@ public class GroundClicked : MonoBehaviour {
                                 tempAS.Play();
                                 //move character, move light , set map status , change global status   
                                 float nowYPosition = yPosition[gameControll.groundMap[x, z]];
-                                angle = Vector3.Angle(selectedCharacter.transform.position, new Vector3(this.transform.position.x, selectedCharacter.transform.position.y , this.transform.position.z));
-                                selectedCharacter.transform.Rotate(0, angle, 0);
+                                selectedCharacter.transform.LookAt(new Vector3(this.transform.position.x, selectedCharacter.transform.position.y, this.transform.position.z));
                                 selectedCharacter.transform.position = new Vector3(this.transform.position.x, nowYPosition, this.transform.position.z);
                                 gameControll.lastLightRec.transform.position = new Vector3(this.transform.position.x, nowYPosition, this.transform.position.z);
                                 gameControll.playerMap[selectPlayerX, selectPlayerZ] = 0;
                                 gameControll.playerMap[x, z] = 1;
-                                if (groundStatus == GameControl.GroundStatus.AMoveSelect)
+                                if( gameControll.groundMap[x,z] == 3 )
+                                {
+                                    GameObject.Find("GameController").GetComponent<HideUI>().ShowEngMsg();
+                                    gameControll.groundStatus = GameControl.GroundStatus.EndPhrase;
+                                    gameControll.phraseMsg.text = "";
+                                }
+                                else if (groundStatus == GameControl.GroundStatus.AMoveSelect)
                                 {
                                     gameControll.groundStatus = GameControl.GroundStatus.ABuildSelect;
                                     gameControll.phraseMsg.text = "Phrase : A Build Turn";
@@ -83,6 +88,7 @@ public class GroundClicked : MonoBehaviour {
                     {
                         if (gameControll.groundMap[x, z] != 4)
                         {
+                            selectedCharacter.transform.LookAt(new Vector3(this.transform.position.x, selectedCharacter.transform.position.y, this.transform.position.z));
                             AudioSource tempAS = gameControll.GetComponent<AudioSource>();
                             tempAS.clip = gameControll.voiceBuild;
                             tempAS.Play();

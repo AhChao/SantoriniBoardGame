@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "SantoriniWeb.data.unityweb",
+"asmCodeUrl": "SantoriniWeb.asm.code.unityweb",
+"asmMemoryUrl": "SantoriniWeb.asm.memory.unityweb",
+"asmFrameworkUrl": "SantoriniWeb.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
