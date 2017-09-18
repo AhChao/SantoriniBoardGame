@@ -1,4 +1,6 @@
 # SantoriniBoardGame
+![Alt text](/Resource/HP.png)
+
 **編輯相關**
 - 遊戲本體來自：
 https://boardgamegeek.com/boardgame/194655/santorini
@@ -7,6 +9,5 @@ https://boardgamegeek.com/boardgame/194655/santorini
 - 音樂來自魔王魂網站 http://maoudamashii.jokersounds.com/
 
 **待更新**
-- 目前為本地遊戲版本，未來可能更新連線版本
-- 遊戲完結及重新開始機制尚未編寫
-- 圓柱體角色模組替換
+- 尚未編寫不能動時的輸掉判定
+- 背景略略單調
