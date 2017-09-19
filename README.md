@@ -9,5 +9,7 @@ https://boardgamegeek.com/boardgame/194655/santorini
 - 音樂來自魔王魂網站 http://maoudamashii.jokersounds.com/
 
 **待更新**
-- 尚未編寫不能動時的輸掉判定
 - 背景略略單調
+
+**網頁展示**
+- https://ahchao.github.io/SantoriniBoardGame/
