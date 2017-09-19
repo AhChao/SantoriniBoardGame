@@ -13,10 +13,10 @@ public class HideUI : MonoBehaviour {
     }
     public void ShowEngMsg()
     {
-        GameObject.Find("Title").SetActive(false);
-        GameObject.Find("Phrase").SetActive(false);
-        GameObject.Find("Button").SetActive(false);
-        GameObject.Find("RuleAndHint").SetActive(false);
+        if (GameObject.Find("Title")) GameObject.Find("Title").SetActive(false);
+        if (GameObject.Find("Phrase")) GameObject.Find("Phrase").SetActive(false);
+        if (GameObject.Find("Button")) GameObject.Find("Button").SetActive(false);
+        if(GameObject.Find("RuleAndHint")) GameObject.Find("RuleAndHint").SetActive(false);
         GameControl gameControll;
         gameControll = GameObject.Find("GameController").GetComponent<GameControl>();
         endMsg.SetActive(true);
