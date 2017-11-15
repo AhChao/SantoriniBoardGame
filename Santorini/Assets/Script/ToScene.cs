@@ -12,4 +12,8 @@ public class ToScene : MonoBehaviour {
     {
         SceneManager.LoadScene("Opening");
     }
+    public void ToNetwork()
+    {
+        SceneManager.LoadScene("NetworkGame");
+    }
 }
